@@ -4,7 +4,7 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Для определения возрастной группы, введите полное количество лет:");
+        Console.WriteLine("Для определения возрастной группы, введите полное количество лет:\n");
         var userAgeStr = Console.ReadLine();
         
         if (userAgeStr == "")
@@ -20,7 +20,7 @@ internal class Program
             }
             else
             {
-                Console.Write("Ваша возрастная группа: ");
+                Console.Write("\nВаша возрастная группа: ");
                 if (userAgeInt >= 0 && userAgeInt <= 2)
                 {
                     Console.WriteLine("младенец.");
@@ -51,15 +51,9 @@ internal class Program
                     }
                 }
             }
-            if (userAgeInt % 2 == 0)
-            {
-                Console.WriteLine("Возраст чётный.");
-            }
-            else
-            {
-                Console.WriteLine("Возраст нечётный.");
-            }
-        }
+            var ageParityCheck = userAgeInt % 2 == 0 ? "Возраст чётный." : "Возраст нечётный.";
+            Console.WriteLine(ageParityCheck);
+         }
         Console.ReadKey();
     }
 }
