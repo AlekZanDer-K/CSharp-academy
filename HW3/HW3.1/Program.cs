@@ -18,39 +18,26 @@ internal class Program
             {
                 Console.WriteLine("Возраст не может быть отрицательным!");
             }
-            else
-            {
-                Console.Write("\nВаша возрастная группа: ");
-                if (userAgeInt >= 0 && userAgeInt <= 2)
+            else if (userAgeInt >= 0 && userAgeInt <= 2)
                 {
-                    Console.WriteLine("младенец.");
+                    Console.WriteLine("\nВаша возрастная группа: младенец.");
                 }
-                else
-                {
-                    if (userAgeInt >= 3 && userAgeInt <= 12)
+                else if (userAgeInt >= 3 && userAgeInt <= 12)
                     {
-                        Console.WriteLine("ребёнок.");
+                        Console.WriteLine("\nВаша возрастная группа: ребёнок.");
                     }
-                    else
-                    {
-                        if (userAgeInt >= 13 && userAgeInt <= 17)
+                    else if (userAgeInt >= 13 && userAgeInt <= 17)
                         {
-                            Console.WriteLine("подросток.");
+                            Console.WriteLine("\nВаша возрастная группа: подросток.");
                         }
-                        else
-                        {
-                            if (userAgeInt > 18 && userAgeInt <= 59)
+                        else if (userAgeInt > 18 && userAgeInt <= 59)
                             {
-                                Console.WriteLine("взрослый.");
+                                Console.WriteLine("\nВаша возрастная группа: взрослый.");
                             }
                             else
                             {
-                                Console.WriteLine("пожилой.");
+                                Console.WriteLine("\nВаша возрастная группа: пожилой.");
                             }
-                        }
-                    }
-                }
-            }
             var ageParityCheck = userAgeInt % 2 == 0 ? "Возраст чётный." : "Возраст нечётный.";
             Console.WriteLine(ageParityCheck);
          }
