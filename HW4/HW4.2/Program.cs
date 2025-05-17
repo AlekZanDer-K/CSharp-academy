@@ -6,7 +6,7 @@ internal class Program
     {
         Console.WriteLine($"Все двухзначные числа кратные 5:\n");
 
-        for (var i = -99; i < 100; i++) 
+        for (var i = -95; i < 100; i+=5) 
         { 
            if ( i % 5 == 0 && (i <= -10 || i >= 10))
            {

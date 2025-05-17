@@ -5,12 +5,12 @@ internal class Program
     static void Main(string[] args)
     {
         Console.WriteLine($"Для перемещения фигуры нажмите W (вперёд) ,A (влево) ,S (назад), D (вправо) или Space (остаться на месте)." +
-                          $"\nДля выхода нажмите клавишу Q:");
+                          $"\nДля выхода нажмите клавишу Esc:");
         for ( ; ; )
         {
             var movmentKey = Console.ReadKey(true).KeyChar;
-        
-            if (movmentKey == 'q')
+            movmentKey = char.ToLower(movmentKey);
+            if (movmentKey == '\u001b')
             {
                 break;
             }
@@ -28,7 +28,7 @@ internal class Program
 
                 Console.Clear();
                 Console.WriteLine($"Для перемещения фигуры нажмите W (вперёд) ,A (влево) ,S (назад), D (вправо) или Space (остаться на месте)." +
-                          $"\nДля выхода нажмите клавишу Q:");
+                          $"\nДля выхода нажмите клавишу Esc:");
 
                 Console.WriteLine($"\n{resoult}");
             }
