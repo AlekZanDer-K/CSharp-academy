@@ -9,9 +9,9 @@ internal class Program
         Console.WriteLine("Введите атора книги:");
         var userAuthor = Console.ReadLine();
         Console.WriteLine("Введите количество страниц:");
-        var pages = Int32.TryParse(Console.ReadLine(), out var userPages);
+        var examinPages = int.TryParse(Console.ReadLine(), out var userPages);
 
-        if (pages == false)
+        if (examinPages == false)
         {
             userPages = 0;
         }

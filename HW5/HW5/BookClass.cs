@@ -35,7 +35,7 @@ internal class BookClass
 
         set
         {
-            if (String.IsNullOrEmpty(value) == true)
+            if (string.IsNullOrEmpty(value) == true)
             {
                 _author = "Unknown";
             }
@@ -55,7 +55,7 @@ internal class BookClass
 
         set
         {
-            if (value <= 0)
+            if (value < 0)
             {
                 _pages = 0;
             }
@@ -78,7 +78,6 @@ internal class BookClass
         Title = title;
         Author = author;
         Pages = pages;
-
     }
 
     public void GetDescription()
