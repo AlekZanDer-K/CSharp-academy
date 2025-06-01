@@ -2,7 +2,7 @@
 
 static class EmployeeRegistry
 {
-    public static List<EmployeeBase> employeesList = new List<EmployeeBase>();
+    private static List<EmployeeBase> employeesList = new List<EmployeeBase>();
 
     public static EmployeeBase AddEmployee(EmployeeBase employee)
     {
