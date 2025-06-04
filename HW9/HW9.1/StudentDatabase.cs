@@ -22,7 +22,7 @@ static class StudentDatabase
         Console.WriteLine("Самый младший студент(ы):");
 
         var youngAge = 100;
-        for (int i = 0; i < studentList.Count; i++)
+        for (var i = 0; i < studentList.Count; i++)
         {
             if (studentList[i].Age < youngAge)
             {

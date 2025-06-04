@@ -17,7 +17,7 @@ internal class Program
             char[] uslessItem = [' ', '.', ',', ':', ';', '-', '!', '?', '"', '(', ')'];
             string[] strings = testString.ToLower().Split(uslessItem, StringSplitOptions.RemoveEmptyEntries);
 
-            for (int i = 0; i < strings.Length; i++)
+            for (var i = 0; i < strings.Length; i++)
             {
                 if (unicWordList.TryAdd(strings[i], 1))
                 {
